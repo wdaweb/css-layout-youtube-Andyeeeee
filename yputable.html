@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/all.css.css">
+    <link rel="icon" href="03.ico" type="image/x-icon">
+    <title>Dot</title>
+</head>
+<style>
+    html,
+    body {
+        height: 100%;
+        margin: 0;
+        background: rgb(17, 17, 17);
+        color: rgb(218, 218, 218);
+    }
+
+
+    /* 網頁捲軸【寬度】 */
+
+    /* ::-webkit-scrollbar {
+        width: 5px;
+    } */
+
+    /* 網頁捲軸【背景】顏色 */
+    /* ::-webkit-scrollbar-track {
+        background: rgb(7, 7, 7);
+    } */
+
+    /* 網頁捲軸【把手】顏色 */
+    /* ::-webkit-scrollbar-thumb {
+        background: #7346bb;
+    } */
+
+    /* 網頁捲軸【滑過時】把手的顏色 */
+    /* ::-webkit-scrollbar-thumb:hover {
+        background: #c7c0c0;
+    } */
+
+    .topbox {
+        height: 60px;
+        width: 100%;
+        /* margin: auto; */
+        /* background: rgba(100, 134, 203, 0.254); */
+        z-index: 1;
+        position: fixed;
+
+    }
+
+    /* .topbox>div {
+        height: 60px;
+        top: 0;
+    } */
+
+    .topleft {
+        width: 200px;
+        left: 0px;
+        background: rgb(17, 17, 17);
+        z-index: 1;
+    }
+
+    /* .topcenter {
+        width: calc(100% - 40px);
+        top: 0;
+        left: 20px;
+        /* background: rgb(212, 111, 111); */
+
+    input {
+        border: 1px solid white;
+        left: 50%;
+        position: absolute;
+        border-radius: 10px;
+        background: transparent;
+    }
+
+    .search {
+        color: white;
+        background: transparent;
+        left: 65%;
+        position: absolute;
+        font-size: 1px;
+    }
+
+    .topright {
+        width: 200px;
+        right: 10px;
+        position: absolute;
+        /* top: 0; */
+        /* right: 0; */
+        /* background: rgb(154, 95, 209); */
+    }
+
+    .centerbox {
+        height: 100%;
+        /* position: fixed; */
+    }
+
+    .centerbox>div {
+        position: absolute;
+        top: 100px;
+
+        /* height: calc(100% - 60px); */
+        /* /* } */
+    }
+
+    .leftbox {
+        height: calc(100% - 60px);
+        width: 200px;
+        left: 0;
+        top: 60px;
+        position: fixed;
+        overflow-y: scroll;
+        background: rgb(0, 0, 0);
+
+        /* background: firebrick; */
+
+    }
+
+
+    .rightbox {
+        width: calc(100% - 200px);
+        height: calc(100% - 60px);
+        right: 0;
+        background: rgb(2, 2, 2);
+        overflow-y: scroll;
+        position: fixed;
+        left: 200px;
+        top: 60px;
+    }
+
+
+
+    .right-top-box {
+        padding-top: 5px;
+        padding-left: 20px;
+        background: rgb(0, 0, 0);
+        position: fixed;
+        top: 60px;
+        left: 200px;
+    }
+
+
+
+    .main {
+        background: rgb(0, 0, 0);
+        /* width: auto;
+        height: auto; */
+        padding-left: 120px;
+        resize: both
+    }
+
+
+    .main::-webkit-scrollbar-button {
+        background: #080808ed;
+    }
+
+    .video-out-sidebox {
+        width: 360px;
+        height: 302px;
+        background: rgb(0, 0, 0);
+        margin: 10px;
+        display: inline-block
+    }
+
+    .videobox {
+        width: 360px;
+        height: 202px;
+        background: rgb(136, 136, 136);
+        background-image: url(https://i.ytimg.com/vi/iDNW6byjx8k/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFTyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBDF1-2bkdCAddizELQNpwFHY-ajA);
+        background-position: center;
+        background-size: cover;
+        /*符合大小*/
+    }
+
+
+    .short {
+        margin: 24px 0px 24px 0px;
+        font-size: 30px;
+    }
+
+    .x {
+        float: right;
+
+        font-size: 20px;
+    }
+
+
+
+    .short-video-out-sidebox {
+        width: 165px;
+        height: 365px;
+        background: rgb(0, 0, 0);
+        display: inline-block;
+        margin: 10px;
+    }
+
+    /* terbox  */
+    .short-videobox {
+        width: 156px;
+        height: 277px;
+        background: rgb(0, 0, 0);
+        margin: auto;
+        background-image: url(https://i.ytimg.com/vi/iDNW6byjx8k/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFTyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBDF1-2bkdCAddizELQNpwFHY-ajA);
+        background-position: center;
+        background-size: cover;
+    }
+
+
+    .v1 {
+        background-image: url(https://i.ytimg.com/vi/iDNW6byjx8k/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFTyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBDF1-2bkdCAddizELQNpwFHY-ajA);
+    }
+
+    .logo {
+        left: 10%;
+        position: absolute;
+    }
+</style>
+
+<body>
+    <div class="topbox">
+        <div class="topleft"><i class="fa-solid fa-bars"><img class="logo" src="./youtube_logo.png" alt=""></i></div>
+    </div>
+    <!-- <div class="topcenter">搜尋<span>麥克風</span></div> -->
+    <input type="text" placeholder="搜尋">
+    <div class="search"><i class="fa-solid fa-magnifying-glass"></i></div>
+    <div class="topright"><i class="fa-solid fa-house"></i>影片 鈴鐺 頭像</div>
+    </div>
+    <div class="leftbox">
+        <ul>
+            <li>首頁</li>
+            <li>短片</li>
+            <li>訂閱</li>
+            <li>媒體庫</li>
+        </ul>
+        <hr>
+        <ul>
+            <li>媒體庫</li>
+            <li>觀看紀錄</li>
+            <li>你的影片</li>
+            <li>稍後觀看</li>
+            <li>喜歡的影片</li>
+        </ul>
+        <hr>
+        <div>訂閱內容</div>
+        <hr>
+        <div>探索
+            <br>
+
+        </div>
+        <ul>
+            <li>發燒影片</li>
+            <li>音樂</li>
+            <li>電影</li>
+            <li>直播</li>
+            <li>遊戲</li>
+            <li>新聞</li>
+            <li>體育</li>
+        </ul>
+        <hr>
+        <div>youtube更多功能</div>
+        <ul>
+            <li>YouTube Premium</li>
+            <li>YouTube 工作室</li>
+            <li>YouTube Music</li>
+            <li>YouTube Kids</li>
+        </ul>
+        <hr>
+        <ul>
+            <li>設定</li>
+            <li>檢舉紀錄</li>
+            <li>說明</li>
+            <li>提共意見</li>
+        </ul>
+        <hr>
+        <div>簡介 媒體 版權 與我們聯 創作者 廣告 開發人員</div>
+        <div>條款 隱私權 政策與安全性 YouTube 運作方式 測試新功能</div>
+        <div>2023 Google LLC</div>
+    </div>
+    <div class="right-top-box">全部 音樂 遊戲 新聞 動畫 最新上傳</div> <!-- buttom input onclick -->
+    <div class="rightbox">
+        <div class="main">
+            <div class="video-out-sidebox">
+                <div class="videobox v1">
+                </div> <!-- img videi active -->
+                <div>合輯 - 薛之謙 & 郭聰明【耗盡】HD 高清官方完整版 MV title</div>
+                <div>薛之謙、郭聰明、阿冗和其他藝人 title</div>
+            </div>
+
+            <div class="video-out-sidebox">
+                <div class="videobox"></div>
+                <div>合輯 - 薛之謙 & 郭聰明【耗盡】HD 高清官方完整版 MV title</div>
+                <div>薛之謙、郭聰明、阿冗和其他藝人 title</div>
+            </div>
+
+            <div class="video-out-sidebox">
+                <div class="videobox"></div>
+                <div>合輯 - 薛之謙 & 郭聰明【耗盡】HD 高清官方完整版 MV title</div>
+                <div>薛之謙、郭聰明、阿冗和其他藝人 title</div>
+            </div>
+
+            <div class="video-out-sidebox">
+                <div class="videobox"></div>
+                <div>合輯 - 薛之謙 & 郭聰明【耗盡】HD 高清官方完整版 MV title</div>
+                <div>薛之謙、郭聰明、阿冗和其他藝人 title</div>
+            </div>
+
+            <div class="video-out-sidebox">
+                <div class="videobox"></div>
+                <div>合輯 - 薛之謙 & 郭聰明【耗盡】HD 高清官方完整版 MV title</div>
+                <div>薛之謙、郭聰明、阿冗和其他藝人 title</div>
+            </div>
+
+            <div class="video-out-sidebox">
+                <div class="videobox"></div>
+                <div>合輯 - 薛之謙 & 郭聰明【耗盡】HD 高清官方完整版 MV title</div>
+                <div>薛之謙、郭聰明、阿冗和其他藝人 title</div>
+            </div>
+
+            <div class="video-out-sidebox">
+                <div class="videobox"></div>
+                <div>合輯 - 薛之謙 & 郭聰明【耗盡】HD 高清官方完整版 MV title</div>
+                <div>薛之謙、郭聰明、阿冗和其他藝人 title</div>
+            </div>
+
+            <div class="video-out-sidebox">
+                <div class="videobox"></div>
+                <div>合輯 - 薛之謙 & 郭聰明【耗盡】HD 高清官方完整版 MV title</div>
+                <div>薛之謙、郭聰明、阿冗和其他藝人 title</div>
+            </div>
+
+            <hr>
+
+            <div class="short">
+                <div>Short
+                    <button onclick="colse-buttom" class="x">X</button>
+                </div>
+            </div>
+            <div class="short-video-out-sidebox">
+                <div class="short-videobox"></div>
+                <div>合輯 - 薛之謙 & 郭聰明【耗盡】HD 高清官方完整版 MV title</div>
+                <div>觀看次數</div>
+            </div>
+
+
+            <div class="short-video-out-sidebox">
+                <div class="short-videobox"></div>
+                <div>合輯 - 薛之謙 & 郭聰明【耗盡】HD 高清官方完整版 MV title</div>
+                <div>觀看次數</div>
+            </div>
+
+
+            <div class="short-video-out-sidebox">
+                <div class="short-videobox"></div>
+                <div>合輯 - 薛之謙 & 郭聰明【耗盡】HD 高清官方完整版 MV title</div>
+                <div>觀看次數</div>
+            </div>
+
+
+            <div class="short-video-out-sidebox">
+                <div class="short-videobox"></div>
+                <div>合輯 - 薛之謙 & 郭聰明【耗盡】HD 高清官方完整版 MV title</div>
+                <div>觀看次數</div>
+            </div>
+
+            <div class="short-video-out-sidebox">
+                <div class="short-videobox"></div>
+                <div>合輯 - 薛之謙 & 郭聰明【耗盡】HD 高清官方完整版 MV title</div>
+                <div>觀看次數</div>
+            </div>
+
+
+            <div class="short-video-out-sidebox">
+                <div class="short-videobox"></div>
+                <div>合輯 - 薛之謙 & 郭聰明【耗盡】HD 高清官方完整版 MV title</div>
+                <div>觀看次數</div>
+            </div>
+            <div class="short-video-out-sidebox">
+                <div class="short-videobox"></div>
+                <div>合輯 - 薛之謙 & 郭聰明【耗盡】HD 高清官方完整版 MV title</div>
+                <div>觀看次數</div>
+            </div>
+
+
+            <div class="short-video-out-sidebox">
+                <div class="short-videobox"></div>
+                <div>合輯 - 薛之謙 & 郭聰明【耗盡】HD 高清官方完整版 MV title</div>
+                <div>觀看次數</div>
+            </div>
+
+            <hr>
+
+            <div class="video-out-sidebox">
+                <div class="videobox"></div>
+                <div>合輯 - 薛之謙 & 郭聰明【耗盡】HD 高清官方完整版 MV title</div>
+                <div>薛之謙、郭聰明、阿冗和其他藝人 title</div>
+            </div>
+
+            <div class="video-out-sidebox">
+                <div class="videobox"></div>
+                <div>合輯 - 薛之謙 & 郭聰明【耗盡】HD 高清官方完整版 MV title</div>
+                <div>薛之謙、郭聰明、阿冗和其他藝人 title</div>
+            </div>
+
+            <div class="video-out-sidebox">
+                <div class="videobox"></div>
+                <div>合輯 - 薛之謙 & 郭聰明【耗盡】HD 高清官方完整版 MV title</div>
+                <div>薛之謙、郭聰明、阿冗和其他藝人 title</div>
+            </div>
+
+            <div class="video-out-sidebox">
+                <div class="videobox"></div>
+                <div>合輯 - 薛之謙 & 郭聰明【耗盡】HD 高清官方完整版 MV title</div>
+                <div>薛之謙、郭聰明、阿冗和其他藝人 title</div>
+            </div>
+
+            <div class="video-out-sidebox">
+                <div class="videobox"></div>
+                <div>合輯 - 薛之謙 & 郭聰明【耗盡】HD 高清官方完整版 MV title</div>
+                <div>薛之謙、郭聰明、阿冗和其他藝人 title</div>
+            </div>
+
+            <div class="video-out-sidebox">
+                <div class="videobox"></div>
+                <div>合輯 - 薛之謙 & 郭聰明【耗盡】HD 高清官方完整版 MV title</div>
+                <div>薛之謙、郭聰明、阿冗和其他藝人 title</div>
+            </div>
+
+            <div class="video-out-sidebox">
+                <div class="videobox"></div>
+                <div>合輯 - 薛之謙 & 郭聰明【耗盡】HD 高清官方完整版 MV title</div>
+                <div>薛之謙、郭聰明、阿冗和其他藝人 title</div>
+            </div>
+
+            <div class="video-out-sidebox">
+                <div class="videobox"></div>
+                <div>合輯 - 薛之謙 & 郭聰明【耗盡】HD 高清官方完整版 MV title</div>
+                <div>薛之謙、郭聰明、阿冗和其他藝人 title</div>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="centerbox"> -->
+
+
+
+    </div>
+</body>
+
+</html>
