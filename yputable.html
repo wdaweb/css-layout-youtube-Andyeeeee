@@ -21,24 +21,24 @@
 
     /* 網頁捲軸【寬度】 */
 
-    /* ::-webkit-scrollbar {
+    ::-webkit-scrollbar {
         width: 5px;
-    } */
+    }
 
     /* 網頁捲軸【背景】顏色 */
-    /* ::-webkit-scrollbar-track {
-        background: rgb(7, 7, 7);
-    } */
+    ::-webkit-scrollbar-track {
+        background: rgba(7, 7, 7, 0);
+    }
 
     /* 網頁捲軸【把手】顏色 */
-    /* ::-webkit-scrollbar-thumb {
-        background: #7346bb;
-    } */
+    ::-webkit-scrollbar-thumb {
+        background: #5f5f5f;
+    }
 
     /* 網頁捲軸【滑過時】把手的顏色 */
-    /* ::-webkit-scrollbar-thumb:hover {
+    ::-webkit-scrollbar-thumb:hover {
         background: #c7c0c0;
-    } */
+    }
 
     .topbox {
         height: 60px;
@@ -69,8 +69,11 @@
         /* background: rgb(212, 111, 111); */
 
     input {
+        width: 30%;
+        height: 40%;
         border: 1px solid white;
-        left: 50%;
+        left: 36%;
+        top: 10px;
         position: absolute;
         border-radius: 10px;
         background: transparent;
@@ -128,20 +131,34 @@
         overflow-y: scroll;
         position: fixed;
         left: 200px;
-        top: 60px;
+        top: 90px;
     }
 
 
 
     .right-top-box {
+        width: calc(100% - 200px);
+        height: 30px;
         padding-top: 5px;
         padding-left: 20px;
         background: rgb(0, 0, 0);
         position: fixed;
         top: 60px;
         left: 200px;
+        z-index: 1;
     }
 
+    .right-top-box div {
+        display: inline-block;
+        background: #5f5f5f;
+        border-radius: 4px;
+        padding: 0px 2px;
+
+    }
+
+    .right-top-box div:first-child {
+        margin-left: 110px;
+    }
 
 
     .main {
@@ -222,12 +239,12 @@
 <body>
     <div class="topbox">
         <div class="topleft"><i class="fa-solid fa-bars"><img class="logo" src="./youtube_logo.png" alt=""></i></div>
+        <input type="text" placeholder="搜尋">
+        <div class="search"><i class="fa-solid fa-magnifying-glass"></i></div>
+        <div class="topright"><i class="fa-solid fa-house"></i>影片 鈴鐺 頭像</div>
     </div>
     <!-- <div class="topcenter">搜尋<span>麥克風</span></div> -->
-    <input type="text" placeholder="搜尋">
-    <div class="search"><i class="fa-solid fa-magnifying-glass"></i></div>
-    <div class="topright"><i class="fa-solid fa-house"></i>影片 鈴鐺 頭像</div>
-    </div>
+
     <div class="leftbox">
         <ul>
             <li>首頁</li>
@@ -279,7 +296,14 @@
         <div>條款 隱私權 政策與安全性 YouTube 運作方式 測試新功能</div>
         <div>2023 Google LLC</div>
     </div>
-    <div class="right-top-box">全部 音樂 遊戲 新聞 動畫 最新上傳</div> <!-- buttom input onclick -->
+    <div class="right-top-box">
+        <div>全部</div>
+        <div>音樂</div>
+        <div>遊戲</div>
+        <div>新聞</div>
+        <div>動畫</div>
+        <div>最新上傳</div>
+    </div> <!-- buttom input onclick -->
     <div class="rightbox">
         <div class="main">
             <div class="video-out-sidebox">
